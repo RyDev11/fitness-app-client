@@ -16,7 +16,7 @@ export default function AppNavbar(){
 	return (
 		<Navbar className="custom-navbar" expand="lg">
 		    <Container>
-		        <Navbar.Brand as={NavLink} to="/">Grit & Co.</Navbar.Brand>
+		        <Navbar.Brand as={NavLink} to="/">FitSync</Navbar.Brand>
 		        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		        <Navbar.Collapse id="basic-navbar-nav">
 		            <Nav className="ms-auto"> 
@@ -25,8 +25,8 @@ export default function AppNavbar(){
 		                {user.id !== null ? (
 		                       
 		                        <>   
-		                        	<Nav.Link as={NavLink} to="/products">Workouts</Nav.Link>
-		                            <Nav.Link as={NavLink} to="/logout">Add Workout</Nav.Link>
+		                        	<Nav.Link as={NavLink} to="/workouts">Workouts</Nav.Link>
+		                            <Nav.Link as={NavLink} to="/addWorkout">Add Workout</Nav.Link>
 		                            <Nav.Link as={NavLink} to="/logout">Logout</Nav.Link>
 		                        </>
 		                    

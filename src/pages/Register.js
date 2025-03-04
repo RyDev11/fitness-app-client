@@ -1,15 +1,13 @@
-import { useState, useEffect, useContext } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import { Navigate, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useState, useEffect, useContext } from "react";
+import { Form, Button } from "react-bootstrap";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Notyf } from "notyf";
-import UserContext from '../context/UserContext';
+import UserContext from "../context/UserContext";
 
 export default function Register() {
     const { user } = useContext(UserContext);
     const notyf = new Notyf();
-    const navigate = useNavigate(); // Define navigate
-
-    // State hooks for input fields
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,8 +19,7 @@ export default function Register() {
             email !== "" &&
             password !== "" &&
             confirmPassword !== "" &&
-            password === confirmPassword &&
-            mobileNo.length === 8
+            password === confirmPassword
         ) {
             setIsActive(true);
         } else {
@@ -43,32 +40,30 @@ export default function Register() {
                 password
             })
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.message === "Registered successfully") {
-                    // Clears input fields
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if (data.message === "Registered Successfully") {
+                setEmail("");
+                setPassword("");
+                setConfirmPassword("");
 
-                    setEmail("");
-                    setPassword("");
-                    setConfirmPassword("");
-                    notyf.success("Registration successful!");
-                    navigate("/login"); // Redirect to login page
-                } else {
-                    notyf.error("Something went wrong");
-                }
-            });
+                notyf.success("Registration successful!");
+                navigate("/login");
+            } else {
+                notyf.error("Something went wrong");
+            }
+        });
     }
 
     return user.id !== null ? (
         <Navigate to="/login" />
     ) : (
-        <div className="d-flex justify-content-center align-items-center ">
-            <div className="register-container shadow-lg p-4 rounded">
+        <div className=" auth-page d-flex justify-content-center align-items-center">
+            <div className="auth-container shadow-lg p-4 rounded">
                 <Form onSubmit={registerUser}>
                     <h2 className="mb-4 text-center">Register</h2>
-                    
-                    
+
                     <Form.Group className="mb-3">
                         <Form.Label>Email:</Form.Label>
                         <Form.Control 
@@ -79,8 +74,6 @@ export default function Register() {
                             onChange={e => setEmail(e.target.value)} 
                         />
                     </Form.Group>
-
-                    
 
                     <Form.Group className="mb-3">
                         <Form.Label>Password:</Form.Label>
@@ -116,5 +109,4 @@ export default function Register() {
             </div>
         </div>
     );
-
 }

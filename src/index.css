@@ -5,3 +5,270 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #222222;
+    color: #32CD32 !important; 
+
+}
+
+.custom-navbar {
+    background-color: #222222 !important; /* Dark Gray */
+    padding: 15px 20px;
+    border-bottom: 5px solid #32CD32 !important;
+}
+
+.custom-navbar .navbar-brand {
+    color: #32CD32 !important; /* Neon Green */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #FF5733 !important; /* Bright Orange */
+}
+
+.custom-navbar .nav-link {
+    color: #32CD32 !important; /* Neon Green */
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #FF5733 !important; /* Bright Orange */
+}
+
+.custom-navbar .nav-link.active {
+    color: #007BFF !important; /* Electric Blue */
+    font-weight: bold;
+    border-bottom: 2px solid #007BFF; /* Underline effect for active links */
+}
+
+.navbar-toggler {
+    border-color: #32CD32 !important; /* Green toggle button */
+}
+
+.navbar-toggler-icon {
+    background-color: #32CD32 !important; /* Custom color for the toggler icon */
+}
+
+
+.banner-container {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    color: #32CD32 !important; 
+}
+
+.banner-button {
+  background-color: #32CD32 !important;
+  color: black; 
+}
+
+.btn.btn-primary.details {
+  background-color: #32CD32 !important;
+  color: black;
+}
+
+/* Workout Card */
+.workout-card {
+    width: 100%;
+    min-height: 350px;
+    border: 1px solid #32CD32 !important; /* Neon Green Border */
+    border-radius: 10px;
+    background-color: #222222 !important; /* Dark Gray */
+    color: #32CD32 !important; /* Neon Green Text */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the Card */
+.workout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(50, 205, 50, 0.6); /* Slight glow effect */
+}
+
+/* Card Title */
+.workout-card .card-title a {
+    color: #32CD32 !important; /* Neon Green */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.workout-card .card-title a:hover {
+    color: #FF5733 !important; /* Bright Orange */
+}
+
+/* Card Text */
+.workout-card .card-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Card Footer */
+.workout-card .card-footer {
+    background-color: #222222 !important; /* Dark Gray */
+    border-top: 1px solid #32CD32 !important; /* Green Border */
+}
+
+/* Details Button */
+.btn.btn-primary.details {
+    background-color: #32CD32 !important; /* Neon Green */
+    color: black !important;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn.btn-primary.details:hover {
+    background-color: #FF5733 !important; /* Bright Orange */
+    color: black !important;
+    transform: scale(1.05);
+}
+
+/* Centering the Form Container */
+.add-workout-container {
+    max-width: 500px; /* Limit width for better UI */
+    background-color: #222222; /* Dark Gray Background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(50, 205, 50, 0.4); /* Neon Green glow */
+    color: #32CD32 !important; /* Neon Green Text */
+}
+
+/* Form Labels */
+.add-workout-container label {
+    font-weight: bold;
+    color: #32CD32 !important; /* Neon Green */
+}
+
+/* Input Fields */
+.add-workout-container input {
+    background-color: #333333; /* Slightly lighter Dark Gray */
+    color: #FFFFFF; /* White text */
+    border: 1px solid #32CD32 !important; /* Neon Green Border */
+    padding: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Input Fields: Focus Effect */
+.add-workout-container input:focus {
+    border-color: #FF5733 !important; /* Bright Orange */
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 87, 51, 0.6); /* Soft Glow */
+}
+
+/* Submit Button */
+.add-workout-container .btn-primary {
+    background-color: #32CD32 !important; /* Neon Green */
+    color: black !important;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Submit Button: Hover Effect */
+.add-workout-container .btn-primary:hover {
+    background-color: #FF5733 !important; /* Bright Orange */
+    transform: scale(1.05);
+}
+
+/* Cancel Button */
+.add-workout-container .btn-secondary {
+    background-color: #007BFF !important; /* Electric Blue */
+    color: white !important;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Cancel Button: Hover Effect */
+.add-workout-container .btn-secondary:hover {
+    background-color: #FF5733 !important; /* Bright Orange */
+    transform: scale(1.05);
+}
+
+/* Container for Login and Register Forms */
+.auth-container {
+    max-width: 400px;
+    background-color: #222222; /* Dark Gray */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(50, 205, 50, 0.4); /* Neon Green Glow */
+    color: #32CD32 !important; /* Neon Green Text */
+}
+
+/* Form Labels */
+.auth-container label {
+    font-weight: bold;
+    color: #32CD32 !important; /* Neon Green */
+}
+
+/* Input Fields */
+.auth-container input {
+    background-color: #333333; /* Slightly lighter Dark Gray */
+    color: #FFFFFF; /* White Text */
+    border: 1px solid #32CD32 !important; /* Neon Green Border */
+    padding: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Input Fields: Focus Effect */
+.auth-container input:focus {
+    border-color: #FF5733 !important; /* Bright Orange */
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 87, 51, 0.6); /* Soft Glow */
+}
+
+/* Submit Button */
+.auth-container .btn-primary {
+    background-color: #32CD32 !important; /* Neon Green */
+    color: black !important;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Submit Button: Hover Effect */
+.auth-container .btn-primary:hover {
+    background-color: #FF5733 !important; /* Bright Orange */
+    transform: scale(1.05);
+}
+
+/* Disabled Button */
+.auth-container .btn-danger {
+    background-color: #d9534f !important; /* Red */
+    color: white !important;
+    font-weight: bold;
+    border: none;
+    opacity: 0.8;
+}
+
+/* Links */
+.auth-container a {
+    color: #007BFF !important; /* Electric Blue */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Links: Hover Effect */
+.auth-container a:hover {
+    color: #FF5733 !important; /* Bright Orange */
+}
+
+/* Center Login & Register Containers */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

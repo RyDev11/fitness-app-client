@@ -8,13 +8,14 @@ export default function Banner({data}){
 
 	return(
 
-		<Row>
-			<Col className="text-center">
-				<h1>{title}</h1>
-                <p>{content}</p>
-                <Button variant="primary" as={Link} to={destination}>{buttonLabel}</Button>
-			</Col>
-		</Row>
+		<Row className="banner-container d-flex justify-content-center align-items-center">
+    		<Col xs={12} md={8} lg={6} className="text-center">
+        		<h1>{title}</h1>
+        		<p>{content}</p>
+        		<Button variant="primary" className="banner-button" as={Link} to={destination}>{buttonLabel}</Button>
+   			 </Col>
+</Row>
+
 
 	)
 }

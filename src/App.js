@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import AppNavbar from "./components/AppNavbar";
 
- 
 import Home from "./pages/Home";
-// import Products from "./pages/Workouts";
+import Workouts from "./pages/Workouts";
 
-// import AddProduct from "./components/AddWorkout";
+import AddWorkout from "./components/AddWorkout";
 import Register from "./pages/Register";
 import Login from './pages/Login';
 import Logout from "./pages/Logout";
@@ -16,7 +15,46 @@ import { UserProvider } from "./context/UserContext";
 
 
 function App() {
-  
+  // State hook for the user to allow it to have a global scope
+  const [ user, setUser ] = useState({
+    id: null,
+    isAdmin: null
+  });
+
+  // Function for clearing the local storage
+  function unsetUser(){
+    localStorage.clear();
+  }
+
+  // Used to check if the user information is properly stored
+  useEffect(() => {
+    console.log(user);
+    console.log(localStorage);
+    
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/details`, {
+
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+
+        if(data && data.user){
+          setUser({
+              id: data.user._id,
+              isAdmin: data.user.isAdmin
+          });
+        } else {
+
+          setUser({
+              id: null,
+              isAdmin: null
+          });
+        }
+    })
+  }, [])
 
 
 
@@ -33,7 +71,7 @@ function App() {
               <Route path="/workouts" element={<Workouts />} />
               
               <Route path="/addWorkout" element={<AddWorkout />} />
-              
+              {/*<Route path="/workouts/:id" element={<WorkoutDetails />} />*/}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/logout" element={<Logout />} />
@@ -42,7 +80,7 @@ function App() {
           </Routes>
 
           </Container>
-           <Footer />
+          
         </Router>
 
       </UserProvider>

@@ -104,8 +104,8 @@ export default function Login() {
 
     return (
         (user.id !== null) ? <Navigate to="/" /> : (
-            <div className="d-flex justify-content-center align-items-center vh-100">
-                <div className="login-container shadow-lg p-4 rounded">
+            <div className="auth-page d-flex justify-content-center align-items-center vh-100">
+                <div className="auth-container shadow-lg p-4 rounded">
                     <Form onSubmit={(e) => authenticate(e)}>
                         <h2 className="mb-4 text-center">Login</h2>
                         <Form.Group>
