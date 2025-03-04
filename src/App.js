@@ -5,9 +5,9 @@ import AppNavbar from "./components/AppNavbar";
 
  
 import Home from "./pages/Home";
-import Products from "./pages/Workouts";
+// import Products from "./pages/Workouts";
 
-import AddProduct from "./components/AddWorkout";
+// import AddProduct from "./components/AddWorkout";
 import Register from "./pages/Register";
 import Login from './pages/Login';
 import Logout from "./pages/Logout";
