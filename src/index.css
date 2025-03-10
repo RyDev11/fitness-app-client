@@ -79,7 +79,7 @@ html, body {
 /* Workout Card */
 .workout-card {
     width: 100%;
-    min-height: 350px;
+    min-height: 150px;
     border: 1px solid #32CD32 !important; /* Neon Green Border */
     border-radius: 10px;
     background-color: #222222 !important; /* Dark Gray */
@@ -95,14 +95,14 @@ html, body {
 }
 
 /* Card Title */
-.workout-card .card-title a {
+.workout-card .card-title {
     color: #32CD32 !important; /* Neon Green */
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
-.workout-card .card-title a:hover {
+.workout-card .card-title:hover {
     color: #FF5733 !important; /* Bright Orange */
 }
 

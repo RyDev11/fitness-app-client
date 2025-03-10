@@ -19,12 +19,10 @@ export default function WorkoutCard({ workoutProp }) {
     return (
         <Col xs={12}>
             <Card className="workout-card text-center shadow-lg mx-3 my-3 border-0 rounded-0 " 
-                style={{ width: "100%", minHeight: "350px", border: "1px solid #ddd", borderRadius: "10px" }}>
+                style={{ width: "100%", minHeight: "200px", border: "1px solid #ddd", borderRadius: "10px" }}>
                 <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                    <Card.Title>
-                        <Link to={`/workouts/${_id}`} className="text-dark text-decoration-none">
-                            {name}
-                        </Link>
+                    <Card.Title className="text-dark text-decoration-none">
+                        {name}
                     </Card.Title>
                     <Card.Text className="">Duration: {duration} mins</Card.Text>
                     <Card.Text className="">Status: {status}</Card.Text>
