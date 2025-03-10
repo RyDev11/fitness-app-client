@@ -29,9 +29,7 @@ export default function WorkoutCard({ workoutProp }) {
                     <Card.Text className="">Duration: {duration} mins</Card.Text>
                     <Card.Text className="">Status: {status}</Card.Text>
                 </Card.Body>
-                <Card.Footer className="bg-light">
-                    <Link className="btn btn-primary details w-100 mt-2" to={`/workouts/updateWorkout${_id}`}>Details</Link>
-                </Card.Footer>
+                
             </Card>
         </Col>
     )
